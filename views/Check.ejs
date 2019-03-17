@@ -1,0 +1,139 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+<title>Checkprice</title>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>      
+
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container" style="margin-top: 20px;overflow: hidden;">
+    
+    <%- messages('messages', locals) %>
+    <% if(errors){ %>
+
+    <% errors.forEach(function(error){%>
+
+
+
+      <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        
+        <%= error.msg %>
+
+      </div>
+
+    <% });%>
+
+
+
+    <% } %>
+
+</div>
+
+<div class="container" style="margin-top: 100px;">
+
+<h3 style="text-align:center; margin-bottom:30px;"><i>Fill the below details to predict your property price</i></h3>
+
+<form method="post" action="/submit-check" >
+
+	<div class="form-group">
+
+	<label for=""><b>City</b></label><span style="color:red; margin-left:2px;">*</span>
+	<select name="name" class="form-control">
+    <option value="Mumbai">Mumbai</option>
+    <option value="Chennai">Chennai</option> 
+    <option value="Goa">Goa</option>
+    <option value="Pune">Pune</option>
+</select>
+	</div>
+
+<div class="form-group">
+
+  <label for=""><b>Zipcode</b></label><span style="color:red; margin-left:2px;">*</span>
+  <select name="zipcode" class="form-control">
+    <option value="40110">401105</option>
+    <option value="98178">98178</option> 
+    <option value="40110">401107</option>
+    <option value="40110">401108</option>
+</select>
+  </div>
+
+	<div class="form-group">
+
+	<label for=""><b>Sqft size</b></label><span style="color:red; margin-left:2px;">*</span>
+	<input type="text" name="size" class="form-control" placeholder="Sqft size of your property">
+
+	</div>
+	
+<div class="form-group">
+
+  <label for=""><b>Bedrooms</b></label><span style="color:red; margin-left:2px;">*</span>
+  <select name="bedroom" class="form-control">
+    <option value="1">1</option>
+    <option value="2">2</option> 
+    <option value="3">3</option>
+    <option value="4">4</option>
+</select>
+  </div>
+
+
+<input type="submit" name="submit" value="submit" class="btn btn-success">
+
+
+
+</form>
+</div>
+
+
+
+
+<footer><p style="text-align:center;">&COPY; WebsiteName</p></footer>
+
+</body>
+
+
+
+
+</html>

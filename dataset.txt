@@ -1,0 +1,22 @@
+Gender Car_Owns Travel Transport
+M Yes Cheap Bus
+F No  High  Train
+M No  Cheap Bus
+M Yes High  Train
+F No  Cheap Bus
+F Yes High  Train 
+
+
+mongodb+srv://Aniket:Aniket@20@cmscart-rx7ed.mongodb.net/admin
+
+
+
+mongodb+srv://Aniket:<Aniket@20>@cmscart-rx7ed.mongodb.net/admin
+
+
+mongodb+srv://Aniket:Aniket20@cmscart-rx7ed.mongodb.net/admin
+
+mongodb+srv://Aniket:Aniket20@cluster0-t7fya.mongodb.net/admin
+
+
+mongo "mongodb+srv://cluster0-t7fya.mongodb.net/test"     --username Aniket
